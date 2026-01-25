@@ -1,0 +1,49 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Pages
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
+import Portfolio from "./pages/Portfolio";
+import Dashboard from "./pages/Dashboard";
+
+// Components
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+function App() {
+  return (
+    <Router>
+      {/* Website Navbar */}
+      <Navbar />
+
+      <Routes>
+        {/* Public Pages */}
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+
+        {/* Auth Pages */}
+        <Route path="/login" element={<Login />} />
+       <Route path="/signup" element={<Signup />} />
+
+
+
+        {/* Admin Dashboard */}
+       <Route path="/dashboard" element={<Dashboard />} />
+
+      </Routes>
+
+      {/* Website Footer */}
+      <Footer />
+    </Router>
+  );
+}
+
+export default App;
