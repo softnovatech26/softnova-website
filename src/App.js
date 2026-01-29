@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
+import Mission from "./pages/Mission";
+import Vision from "./pages/Vision";
 import Portfolio from "./pages/Portfolio";
 import Dashboard from "./pages/Dashboard";
 
@@ -28,7 +30,9 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
-
+    
+        <Route path="/mission" element={<Mission />} />
+        <Route path="/vision" element={<Vision />} />
         {/* Auth Pages */}
         <Route path="/login" element={<Login />} />
        <Route path="/signup" element={<Signup />} />
