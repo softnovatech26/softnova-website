@@ -10,6 +10,7 @@ import slide2 from "../pages/Images/Web Dev.jpeg";
 import slide3 from "../pages/Images/React Admin .jpeg";
 import slide4 from "../pages/Images/Py dev.jpeg";
 import slide5 from "../pages/Images/E.Commerce.jpeg";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const settings = {
@@ -82,24 +83,23 @@ const Home = () => {
         </h2>
         <p className="max-w-3xl mx-auto text-gray-600 leading-7">
           SoftNova Tech provides complete web development, AI projects,
-          e-commerce solutions and final year projects for students.
-          We focus on clean design, secure backend and modern technologies.
-
-          ,,,,,
-          SoftNova Tech provides complete web development, AI projects,
-          e-commerce solutions and final year projects for students.
-          We focus on clean design, secure backend and modern technologies
-          SoftNova Tech provides complete web development, AI projects,
-          e-commerce solutions and final year projects for students.
-          We focus on clean design, secure backend and modern technologies
-          SoftNova Tech provides complete web development, AI projects,
-          e-commerce solutions and final year projects for students.
-          SoftNova Tech provides complete web development, AI projects,
-          e-commerce solutions and final year projects for students.
-          We focus on clean design, secure backend and modern technologies
-          We focus on clean design, secure backend and modern technologies
+          e-commerce solutions and final year projects for students. We focus on
+          clean design, secure backend and modern technologies. ,,,,, SoftNova
+          Tech provides complete web development, AI projects, e-commerce
+          solutions and final year projects for students. We focus on clean
+          design, secure backend and modern technologies SoftNova Tech provides
+          complete web development, AI projects, e-commerce solutions and final
+          year projects for students. We focus on clean design, secure backend
+          and modern technologies SoftNova Tech provides complete web
+          development, AI projects, e-commerce solutions and final year projects
+          for students. SoftNova Tech provides complete web development, AI
+          projects, e-commerce solutions and final year projects for students.
+          We focus on clean design, secure backend and modern technologies We
+          focus on clean design, secure backend and modern technologies
         </p>
       </section>
+
+      <Footer />
     </>
   );
 };

@@ -15,7 +15,6 @@ import Dashboard from "./pages/Dashboard";
 
 // Components
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -30,22 +29,18 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
-    
+
         <Route path="/mission" element={<Mission />} />
         <Route path="/vision" element={<Vision />} />
         {/* Auth Pages */}
         <Route path="/login" element={<Login />} />
-       <Route path="/signup" element={<Signup />} />
-
-
+        <Route path="/signup" element={<Signup />} />
 
         {/* Admin Dashboard */}
-       <Route path="/dashboard" element={<Dashboard />} />
-
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
 
       {/* Website Footer */}
-      <Footer />
     </Router>
   );
 }
