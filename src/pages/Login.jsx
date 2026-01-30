@@ -43,7 +43,7 @@ const Login = () => {
           New user?{" "}
           <Link
             to="/signup"
-            className="text-red-800 font-semibold font-sans hover:underline"
+            className="text-red-800 font-semibold  hover:underline"
           >
             Signup here
           </Link>

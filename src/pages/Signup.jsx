@@ -16,7 +16,7 @@ const Signup = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="text-2xl font-bold tracking-wide text-center text-red-700 mb-6">
+        <h2 className="text-2xl font-bold  font-impact tracking-wide text-center text-red-700 mb-6">
           Create Your Account
         </h2>
 
