@@ -17,6 +17,7 @@ const Dashboard = () => {
           <StatCard title="Total Projects" value="12" />
           <StatCard title="Clients" value="8" />
           <StatCard title="Revenue" value="$4,200" />
+          {/* Start user  */}
         </div>
       </div>
 
