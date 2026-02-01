@@ -8,7 +8,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-white backdrop-blur-md sticky top-0 z-50 shadow-lg">
+    <nav className="bg-white backdrop-blur-md sticky top-0 z-50 shadow-lg  bg-gradient-to-br from-red-800/70  to-red-400/30 border-b border-red-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-20">
         <Link
           to="/"
@@ -21,7 +21,7 @@ const Navbar = () => {
               className="h-12 w-12 object-contain rounded-full"
             />
           </div>
-          <span className="text-red-600 text-2xl font-bold tracking-wider">
+          <span className="text-red-600 text-2xl font-bold font-futura tracking-wider">
             SoftNova <span className="text-red-900">Tech</span>
           </span>
         </Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
               style={{ zIndex: 999 }}
             >
               {[
-                { name: "About Us", path: "/about-us" },
+                { name: "About", path: "/about" },
                 { name: "Mission", path: "/mission" },
                 { name: "Vision", path: "/vision" },
               ].map((item, i) => (

@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       fontFamily: {
         impact: ["Impact", "sans-serif"],
+
+        futura: ["Poppins", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },
