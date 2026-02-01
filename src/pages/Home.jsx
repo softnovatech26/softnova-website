@@ -254,6 +254,7 @@ const Home = () => {
       <section
         className="relative min-h-screen flex items-center justify-center"
         style={{
+          
           backgroundImage: `url(${heroBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
