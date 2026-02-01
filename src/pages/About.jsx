@@ -17,7 +17,12 @@ const AboutUs = () => {
           Our engineering culture focuses on performance, reliability, and scalability. 
           We provide innovative digital products that help businesses grow faster and smarter.
         </p>
+        <h1 className="text-4xl md:text-5xl font-bold mt-12 mb-6 text-red-600">Our Team</h1>
+        create a team section here in future
+        only add 7 cool Desging cards with temporry images name and designation 
+         not create card backend page ....
       </div>
+      
     </div>
   );
 };

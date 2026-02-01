@@ -89,6 +89,13 @@ const Home = () => {
             </div>
           </div>
         </div>
+         {/* More services Add With Create  alll Pages 
+         jab card ka uper click hooo serviece component pe ander wala page open hojy 
+         Exmple : web Development pe click ho to servers.jsx ka under web Developemt wla page open hojy
+         
+           4 cards name (Wordpress Development)
+           5 card name (Complete IT Solutions & Support)
+           6 card name (Grapics Desging ) */}
       </section>
 
       <Footer />

@@ -4,6 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
+//Card Services routes
+import WebService from "./pages/WebService";
+import AIService from "./pages/AIService";
+import EcommerceService from "./pages/EcommerceService";
+
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -27,6 +32,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        {/* // Routes for card services.... */}
+          <Route path="/services/web" element={<WebService />} />
+          <Route path="/services/ai" element={<AIService />} />
+          <Route path="/services/ecommerce" element={<EcommerceService />} />
+          
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
 
