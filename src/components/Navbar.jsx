@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../pages/Images/SoftNova Logo.png";
-import { FiMenu, FiX } from "react-icons/fi"; // please buddy sahab ye icons install kajo thanks
+import { FiMenu, FiX } from "react-icons/fi"; 
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -68,6 +68,16 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+            
+          </li>
+             <li className="relative group">
+            <Link
+              to="/portfolio"
+              className="text-red-800 font-medium relative inline-block px-2 py-1 transform transition duration-300 hover:-translate-y-1 hover:scale-105"
+            >
+              Portfolio
+              <span className="absolute left-0 -bottom-0.5 w-0 h-1 bg-red-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </li>
 
           <li className="relative group">
@@ -75,6 +85,7 @@ const Navbar = () => {
               to="/services"
               className="text-red-800 font-medium relative inline-block px-2 py-1 transform transition duration-300 hover:-translate-y-1 hover:scale-105"
             >
+
               Services
               <span className="absolute left-0 -bottom-0.5 w-0 h-1 bg-red-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
             </Link>

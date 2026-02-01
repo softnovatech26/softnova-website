@@ -6,5 +6,5 @@ Built with React + Tailwind CSS
 
 
 Under the process dashboard
-http://localhost:3000/dashboard
+http://localhost:3000/Dashboard
 
