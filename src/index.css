@@ -104,3 +104,31 @@
 .slick-dots li.slick-active button:before {
   color: #38bdf8; /* sky blue */
 }
+
+
+@keyframes wordFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(6px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+    filter: blur(6px);
+  }
+}
+
+.animate-word {
+  animation: wordFade 2.2s ease-in-out;
+}
