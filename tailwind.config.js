@@ -4,6 +4,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+     keyframes: {
+        scrollRightToLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        scrollRightToLeft: 'scrollRightToLeft 20s linear infinite',
+      },
       fontFamily: {
         impact: ["Impact", "sans-serif"],
 
