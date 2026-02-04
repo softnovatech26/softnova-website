@@ -339,7 +339,7 @@ const Home = () => {
               href={blog.link}
               className="group relative rounded-3xl overflow-hidden bg-[#0b132b] shadow-xl transition-transform duration-500 hover:-translate-y-4 hover:shadow-[0_0_40px_rgba(239,68,68,0.35)]"
             >
-              {/* Image */}
+          
               <div className="relative h-60 overflow-hidden">
                 <img
                   src={blog.image}
@@ -347,16 +347,21 @@ const Home = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
-                {/* Gradient Overlay */}
+             
+
+
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
 
-                {/* Category Badge */}
+  
                 <span className="absolute top-5 left-5 bg-red-600 text-white text-xs font-bold px-4 py-1 rounded-full tracking-wide">
                   {blog.category}
                 </span>
               </div>
 
-              {/* Content */}
+
+
+
               <div className="p-7">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-500 transition">
                   {blog.title}
@@ -371,7 +376,7 @@ const Home = () => {
                 </span>
               </div>
 
-              {/* Decorative Glow */}
+              
               <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-red-600/20 rounded-full blur-3xl"></div>
             </a>
           ))}
