@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import Hasseb from "../assets/IMG-20260204-WA0043.jpg";
 import Kumail from "../assets/IMG-20260204-WA0071.jpg";
+
+
+
+
 const team = [
   {
     name: "Haseeb ul Hassan",
