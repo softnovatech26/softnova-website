@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
-import Hasseb from "../assets/IMG-20260204-WA0043.jpg";
-import Kumail from "../assets/IMG-20260204-WA0071.jpg";
-
+import Hasseb from "../assets/Haseeb.jpg";
+import Kumail from "../assets/Kumail.jpg";
+import faiza from "../assets/Faiza.jpeg";
+import Shahnaz from "../assets/Shahnaz.jpeg";
+import Ramsha from "../assets/Ramsha.jpg"; 
 
 
 
@@ -20,7 +22,7 @@ const team = [
   },
   {
     name: "Yasir Abbas",
-    role: "Content Writer",
+    role: "Soical Media Manager",
     image: "https://randomuser.me/api/portraits/men/22.jpg",
   },
   {
@@ -31,12 +33,12 @@ const team = [
   {
     name: "Shahnaz",
     role: "Backend Developer",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    image: Shahnaz,
   },
   {
     name: "Faiza Soomro",
     role: "Backend Developer",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image: faiza,
   },
   {
     name: "Muhammad Mairaj",
@@ -46,7 +48,7 @@ const team = [
   {
     name: "Ramsha Haider",
     role: "Junior Frontend Developer",
-    image: "https://randomuser.me/api/portraits/women/25.jpg",
+    image: Ramsha,
   },
 ];
 
@@ -214,7 +216,7 @@ const About = () => {
         <section className="py-28 bg-gradient-to-b from-black via-gray-950 to-black">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-16">
-              Meet Our <span className="text-red-600">Team</span>
+              The Our <span className="text-red-600"> Grate Team</span>
             </h2>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">

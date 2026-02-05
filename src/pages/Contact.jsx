@@ -5,7 +5,7 @@ const Contact = () => {
 
         {/* LEFT SIDE – GET IN TOUCH */}
         <div className="bg-white rounded-lg shadow">
-          <h2 className="bg-red-300 text-white text-center py-3 rounded-t-lg text-xl font-semibold">
+          <h2 className="bg-red-500 text-white text-center py-3 rounded-t-lg text-xl font-semibold">
             Get In Touch With Us Now!
           </h2>
 
@@ -51,7 +51,7 @@ const Contact = () => {
 
         {/* RIGHT SIDE – CONTACT FORM */}
         <div className="bg-gray-200 rounded-lg shadow">
-          <h2 className="bg-red-300 text-white text-center py-3 rounded-t-lg text-xl font-semibold">
+          <h2 className="bg-red-500 text-white text-center py-3 rounded-t-lg text-xl font-semibold">
             Contact Us
           </h2>
 
@@ -92,7 +92,7 @@ const Contact = () => {
             
             <button
               type="submit"
-              className="bg-red-300 text-white px-8 py-3 rounded flex items-center gap-2 hover:bg-red-600"
+              className="bg-red-500 text-white px-8 py-3 rounded flex items-center gap-2 hover:bg-red-800"
             >
               Submit 
             </button>
