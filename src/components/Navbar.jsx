@@ -84,7 +84,7 @@ const Navbar = () => {
                   Graphics Designing
                 </Link>
               </li>
-               <li>
+               {/* <li>
                 <Link
                   to="/portfolio/student"
                   className="block px-5 py-2 text-sm text-white
@@ -92,7 +92,7 @@ const Navbar = () => {
                 >
                   Students Final Year Projects
                 </Link>
-              </li>
+              </li> */}
 
             </ul>
             
