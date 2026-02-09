@@ -15,7 +15,9 @@ const Graphics = () => {
       </h2>
       </div>
 
-      
+      <div>
+        <img src="" alt="" />
+      </div>
 
     </div>
   );
