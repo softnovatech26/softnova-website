@@ -8,6 +8,7 @@ import Shahnaz from "../assets/Shahnaz.jpeg";
 import Ramsha from "../assets/Ramsha.jpg"; 
 import Mairaj from "../assets/Mairaj.jpeg";
 import Moosa from "../assets/my pic 5.png"
+import Yasir from "../assets/Yasir .jpeg"
 
 const team = [
   {
@@ -17,13 +18,13 @@ const team = [
   },
   {
     name: "Muhammad Moosa",
-    role: "Frontend Developer",
+    role: "Full Stack Developer",
     image: Moosa,
   },
   {
     name: "Yasir Abbas",
     role: "Soical Media Manager",
-    image: "https://randomuser.me/api/portraits/men/22.jpg",
+    image: Yasir,
   },
   {
     name: "Kumail",

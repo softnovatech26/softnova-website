@@ -129,7 +129,7 @@ const Navbar = () => {
             onMouseLeave={() => setDropdownOpen(false)}
           >
             <button className="flex items-center gap-1 text-white font-medium hover:text-red-400 transition">
-              About <FiChevronDown />
+              Company <FiChevronDown />
             </button>
 
             <ul

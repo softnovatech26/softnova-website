@@ -34,18 +34,19 @@ const Services = () => {
       img: wordpressImg,
       link: "/services/wordpress",
     },
+     {
+      title: "Graphics Designing",
+      desc: "Branding, UI design and marketing visuals.",
+      img: graphicImg,
+      link: "/services/graphics",
+    },
     {
       title: "IT Solutions & Support",
       desc: "Infrastructure, deployment and support.",
       img: itImg,
       link: "/services/it",
     },
-    {
-      title: "Graphics Designing",
-      desc: "Branding, UI design and marketing visuals.",
-      img: graphicImg,
-      link: "/services/graphics",
-    },
+   
   ];
 
   return (
