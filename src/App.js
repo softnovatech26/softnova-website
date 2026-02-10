@@ -19,7 +19,7 @@ import Vision from "./pages/Vision";
 import WebDev from "./pages/portfolio/WebDev";
 import PythonAI from "./pages/portfolio/PythonAI";
 import Graphics from "./pages/portfolio/Graphics";
-import Student from "./pages/portfolio/Student";
+
 
 import Dashboard from "./pages/Dashboard";
 
@@ -47,7 +47,7 @@ function App() {
         <Route path="/portfolio/web" element={<WebDev />} />
         <Route path="/portfolio/python-ai" element={<PythonAI />} />
         <Route path="/portfolio/graphics" element={<Graphics />} />
-        <Route path="/portfolio/student" element={<Student />} />
+      
 
         <Route path="/contact" element={<Contact />} />
 

@@ -89,12 +89,11 @@ const Contact = () => {
               className="p-3 rounded w-full"
             ></textarea>
 
-            
             <button
               type="submit"
               className="bg-red-500 text-white px-8 py-3 rounded flex items-center gap-2 hover:bg-red-800"
             >
-              Submit 
+              Submit
             </button>
 
           </form>

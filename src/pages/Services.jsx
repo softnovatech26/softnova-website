@@ -2,65 +2,109 @@ import { Link } from "react-router-dom";
 import webImg from "./Images/Web Dev.jpeg";
 import aiImg from "./Images/Py dev.jpeg";
 import ecommerceImg from "./Images/E.Commerce.jpeg";
+import wordpressImg from "../assets/programmer-night.jpg";
+import itImg from "../assets/transhumanist-using-neuroscientific-tech-transcend-physical-limitations.jpg";
+import graphicImg from "../assets/graphic design.jpg";
+import Footer from "../components/Footer";
 
 const Services = () => {
+  const services = [
+    {
+      title: "Web Development",
+      desc: "Modern React and scalable web applications.",
+      img: webImg,
+      link: "/services/web",
+    },
+    {
+      title: "AI & Python Projects",
+      desc: "AI automation, ML models and Python systems.",
+      img: aiImg,
+      link: "/services/ai",
+    },
+    {
+      title: "E-Commerce Solutions",
+      desc: "Complete online store development systems.",
+      img: ecommerceImg,
+      link: "/services/ecommerce",
+    },
+    {
+      title: "WordPress Development",
+      desc: "Custom WordPress business websites.",
+      img: wordpressImg,
+      link: "/services/wordpress",
+    },
+    {
+      title: "IT Solutions & Support",
+      desc: "Infrastructure, deployment and support.",
+      img: itImg,
+      link: "/services/it",
+    },
+    {
+      title: "Graphics Designing",
+      desc: "Branding, UI design and marketing visuals.",
+      img: graphicImg,
+      link: "/services/graphics",
+    },
+  ];
+
   return (
-    <div className="p-10">
-      <h1 className="text-3xl font-bold text-center mb-10">Our Services</h1>
-
-      <div className="grid md:grid-cols-3 gap-8">
-
-        {/* Web Development */}
-        <div className="border rounded-lg shadow p-4">
-          <img src={webImg} alt="Web Development" className="rounded mb-4" />
-          <h2 className="text-xl font-semibold">Web Development</h2>
-          <p className="text-sm mt-2">
-            Modern React websites with fast performance.
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-red-900 py-20 px-6">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-white mb-4">
+            Our <span className="text-red-600">Services</span>
+          </h1>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            We deliver modern digital solutions that combine performance,
+            scalability, and design excellence.
           </p>
-          <Link to="/services/web">
-            <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded">
-              View Details
-            </button>
-          </Link>
         </div>
 
-        {/* AI / Python */}
-        <div className="border rounded-lg shadow p-4">
-          <img src={aiImg} alt="AI Projects" className="rounded mb-4" />
-          <h2 className="text-xl font-semibold">AI & Python Projects</h2>
-          <p className="text-sm mt-2">
-            AI, ML & Python based smart solutions.
-          </p>
-          <Link to="/services/ai">
-            <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded">
-              View Details
-            </button>
-          </Link>
-        </div>
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group relative rounded-3xl overflow-hidden 
+            bg-white/5 border border-white/10 backdrop-blur-xl
+            shadow-xl transform transition duration-500
+            hover:-translate-y-4 hover:shadow-red-900/40"
+            >
+              <div className="h-52 overflow-hidden">
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="w-full h-full object-cover
+                group-hover:scale-110 transition duration-700"
+                />
+              </div>
 
-        {/* E-commerce */}
-        <div className="border rounded-lg shadow p-4">
-          <img src={ecommerceImg} alt="Ecommerce" className="rounded mb-4" />
-          <h2 className="text-xl font-semibold">E-Commerce Websites</h2>
-          <p className="text-sm mt-2">
-            Online stores with admin panels & payments.
-          </p>
-          <Link to="/services/ecommerce">
-            <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded">
-              View Details
-            </button>
-          </Link>
-        </div>
-           {/* More services Add With Create Pages 3  pages alrady created  
-           and Defered to Home.jsx card Section  
-           and baki 3 pages created karna he and import karna he app.js me
-           and filah sub ase simple pages rakhna ander waly jasa mana rakhe hein uspe next work karein he 
-           4 cards name (Wordpress Development)
-           5 card name (Complete IT Solutions & Support)
-           6 card name (Grapics Desging ) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-60"></div>
 
+              <div className="relative p-6">
+                <h2 className="text-xl font-semibold text-white mb-2">
+                  {service.title}
+                </h2>
+
+                <p className="text-gray-300 text-sm mb-4">{service.desc}</p>
+
+                <Link to={service.link}>
+                  <button
+                    className="bg-red-600 text-white px-5 py-2 rounded-full
+                  shadow-md hover:bg-red-700 transition duration-300
+                  hover:scale-105"
+                  >
+                    View Details
+                  </button>
+                </Link>
+              </div>
+
+              <div className="absolute inset-0 rounded-3xl border border-red-600/0 group-hover:border-red-600/40 transition duration-500"></div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
