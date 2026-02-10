@@ -8,7 +8,9 @@ import Services from "./pages/Services";
 import WebService from "./pages/WebService";
 import AIService from "./pages/AIService";
 import EcommerceService from "./pages/EcommerceService";
-
+import WordPressService from "./pages/WordPressService";
+import ITService from "./pages/ITService";
+import GraphicsService from "./pages/GraphicDesignService";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -40,8 +42,11 @@ function App() {
         {/* // Routes for card services.... */}
           <Route path="/services/web" element={<WebService />} />
           <Route path="/services/ai" element={<AIService />} />
-          <Route path="/services/ecommerce" element={<EcommerceService />} />
           
+          <Route path="/services/graphics" element={<GraphicsService />} /> 
+          <Route path="/services/ecommerce" element={<EcommerceService />} />
+          <Route path="/services/wordpress" element={<WordPressService />} />
+          <Route path="/services/it" element={<ITService />} />
      
         {/* Porfolio Related Routes */}
         <Route path="/portfolio/web" element={<WebDev />} />

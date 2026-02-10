@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import webImg from "./Images/Web Dev.jpeg";
 import aiImg from "./Images/Py dev.jpeg";
@@ -62,44 +63,35 @@ const Services = () => {
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
           {services.map((service, index) => (
-            <div
+            <Link
               key={index}
+              to={service.link}
               className="group relative rounded-3xl overflow-hidden 
-            bg-white/5 border border-white/10 backdrop-blur-xl
-            shadow-xl transform transition duration-500
-            hover:-translate-y-4 hover:shadow-red-900/40"
+              bg-white/5 border border-white/10 backdrop-blur-xl shadow-xl 
+              transform transition duration-500 hover:-translate-y-4 hover:shadow-red-900/40"
             >
+
               <div className="h-52 overflow-hidden">
                 <img
                   src={service.img}
                   alt={service.title}
-                  className="w-full h-full object-cover
-                group-hover:scale-110 transition duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                 />
               </div>
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-60"></div>
 
+
               <div className="relative p-6">
                 <h2 className="text-xl font-semibold text-white mb-2">
                   {service.title}
                 </h2>
-
-                <p className="text-gray-300 text-sm mb-4">{service.desc}</p>
-
-                <Link to={service.link}>
-                  <button
-                    className="bg-red-600 text-white px-5 py-2 rounded-full
-                  shadow-md hover:bg-red-700 transition duration-300
-                  hover:scale-105"
-                  >
-                    View Details
-                  </button>
-                </Link>
+                <p className="text-gray-300 text-sm">{service.desc}</p>
               </div>
 
+            
               <div className="absolute inset-0 rounded-3xl border border-red-600/0 group-hover:border-red-600/40 transition duration-500"></div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
