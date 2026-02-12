@@ -20,7 +20,7 @@ const Services = () => {
       title: "AI & Python Projects",
       desc: "AI automation, ML models and Python systems.",
       img: aiImg,
-      link: "/services/ai",
+      link: "/services/python",
     },
     {
       title: "E-Commerce Solutions",

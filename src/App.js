@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 //Card Services routes
 import WebService from "./pages/WebService";
-import AIService from "./pages/AIService";
+
 import EcommerceService from "./pages/EcommerceService";
 import WordPressService from "./pages/WordPressService";
 import ITService from "./pages/ITService";
@@ -21,7 +21,7 @@ import Vision from "./pages/Vision";
 import WebDev from "./pages/portfolio/WebDev";
 import PythonAI from "./pages/portfolio/PythonAI";
 import Graphics from "./pages/portfolio/Graphics";
-
+import PythonService from "./pages/PythonService";
 
 import Dashboard from "./pages/Dashboard";
 
@@ -41,7 +41,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         {/* // Routes for card services.... */}
           <Route path="/services/web" element={<WebService />} />
-          <Route path="/services/ai" element={<AIService />} />
+          <Route path="/services/python" element={<PythonService />} />
           
           <Route path="/services/graphics" element={<GraphicsService />} /> 
           <Route path="/services/ecommerce" element={<EcommerceService />} />

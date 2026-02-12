@@ -1,49 +1,105 @@
-
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import wordpressImg from "../assets/sl_122319_26350_36.jpg";
+import wordpressImg from "../assets/wordpress-theme2.jpg";
+
+import themeImg from "../assets/19389.jpg";
+import pluginImg from "../assets/wordpressplugin.jpg";
+import seoImg from "../assets/3409297.jpg";
+
+const features = [
+  {
+    title: "Custom Themes",
+    desc: "Modern, fast, and fully responsive WordPress themes.",
+    img: themeImg,
+  },
+  {
+    title: "Plugin Integration",
+    desc: "Secure and scalable plugin configuration.",
+    img: pluginImg,
+  },
+  {
+    title: "SEO Optimization",
+    desc: "Search-engine friendly structure and performance.",
+    img: seoImg,
+  },
+];
 
 const WordPressService = () => {
   return (
     <>
-      <section className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-red-900 text-white">
-        <div
-          className="relative h-96 bg-cover bg-center flex items-center justify-center"
-          style={{ backgroundImage: `url(${wordpressImg})` }}
-        >
-          <div className="absolute inset-0 bg-black/60"></div>
-          <h1 className="relative z-10 text-4xl md:text-6xl font-bold text-red-600 text-center">
-            WordPress Development
-          </h1>
-        </div>
+      <section className="bg-gradient-to-br from-gray-50 via-white to-red-50 text-gray-900 overflow-hidden min-h-screen">
+        
+        {/* HERO */}
+        <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+          
+          <div>
+            <h1 className="text-5xl font-bold mb-6">
+              WordPress Development
+            </h1>
 
-        <div className="max-w-5xl mx-auto px-6 py-16 text-center">
-          <p className="text-gray-300 text-lg leading-relaxed mb-8">
-            Custom WordPress websites for businesses, fully responsive and SEO-optimized with modern design.
-          </p>
+            <p className="text-gray-600 mb-8">
+              We build fast, secure, and modern WordPress websites designed
+              for performance, scalability, and business growth.
+            </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {[
-              { title: "Custom Themes", desc: "Beautiful and unique WordPress themes.", icon: "🎨" },
-              { title: "Plugins Setup", desc: "Enhance functionality easily.", icon: "🔌" },
-              { title: "SEO Optimized", desc: "Boost search engine visibility.", icon: "🚀" },
-            ].map((feature, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl shadow-lg hover:scale-105 transition-transform duration-500">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm">{feature.desc}</p>
-              </div>
-            ))}
+            {/* BUTTONS */}
+            <div className="flex gap-4 flex-wrap">
+              
+              {/* ORDER BUTTON */}
+              <Link to="/contact">
+                <button className="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition shadow-md">
+                  Order Now
+                </button>
+              </Link>
+
+              {/* BACK BUTTON */}
+              <Link to="/services">
+                <button className="border border-gray-400 px-8 py-3 rounded-full hover:bg-gray-200 transition">
+                  Back to Services
+                </button>
+              </Link>
+
+            </div>
           </div>
 
-          <div className="mt-12">
-            <Link to="/services">
-              <button className="bg-red-600 px-6 py-3 rounded-full hover:bg-red-700 transition text-white font-semibold">
-                Back to Services
-              </button>
-            </Link>
+          <img
+            src={wordpressImg}
+            alt="WordPress service"
+            className="rounded-3xl shadow-xl"
+          />
+        </div>
+
+        {/* FEATURES */}
+        <div className="bg-white py-20">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-3xl font-bold text-center mb-14">
+              Our WordPress Services
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {features.map((feature, i) => (
+                <div
+                  key={i}
+                  className="bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition"
+                >
+                  <img
+                    src={feature.img}
+                    alt={feature.title}
+                    className="h-44 w-full object-cover"
+                  />
+
+                  <div className="p-6 text-center">
+                    <h3 className="font-semibold text-lg mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">{feature.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
       </section>
 
       <Footer />

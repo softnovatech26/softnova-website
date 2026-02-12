@@ -1,59 +1,44 @@
-// import { Link } from "react-router-dom";
-// const Footer = () => {
-//   return (
-//     <footer className="bg-blue-600 text-white w-full py-8 mt-10">
-//       <div className="max-w-6xl mx-auto flex justify-between px-6">
-
-//         {/* LEFT SIDE – SERVICES */}
-//         <div>
-//           <h2 className="text-xl font-bold mb-4">Our Services</h2>
-//           <ul className="space-y-2 text-sm">
-
-//             <li>
-//               <Link to="/services/web" className="hover:underline">
-//                 Web Development
-//               </Link>
-//             </li>
-
-//             <li>
-//               <Link to="/services/ai" className="hover:underline">
-//                 AI / ML Based Projects
-//               </Link>
-//             </li>
-
-//             <li>
-//               <Link to="/services/ecommerce" className="hover:underline">
-//                 E-Commerce Websites
-//               </Link>
-//             </li>
-
-//           </ul>
-//         </div>
-
-//         {/* RIGHT SIDE – COPYRIGHT */}
-//         <div className="flex items-end text-sm">
-//           © 2026 SoftNova Tech. All rights reserved.
-//         </div>
-
-//       </div>
-//     </footer>
-
-//     // 3 services mane asme link kya he jab click karte he too  us page pe jata he
-//     // same baki 3 services ke link add karne he
-//     // or same jab click karein tooo services.jsx me uska ander services ka page open hojy
-//   );
-// };
-
-// export default Footer;
-
 import { Link } from "react-router-dom";
 import logo from "../assets/SoftNova Logo1-06.png";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaGithub,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Footer = () => {
+  // Services links updated
+  const services = [
+    { name: "Web Development", to: "/services/web" },
+    { name: "AI & Python", to: "/services/python" },
+    { name: "E-Commerce Platforms", to: "/services/ecommerce" },
+    { name: "Graphic Design", to: "/services/graphics" },
+    { name: "WordPress Development", to: "/services/wordpress" },
+    { name: "IT Solutions Support", to: "/services/it" },
+  ];
+
+  const socialLinks = [
+    {
+      Icon: FaFacebookF,
+      href: "https://www.facebook.com/profile.php?id=61587545274498",
+    },
+    {
+      Icon: FaWhatsapp,
+      href: "https://chat.whatsapp.com/K35VGX7gqWcHnsL51lWIlN",
+    },
+    { Icon: FaTwitter, href: "https://x.com/SoftNova94" },
+    {
+      Icon: FaLinkedinIn,
+      href: "https://www.linkedin.com/company/soft-nova-tech/",
+    },
+    { Icon: FaGithub, href: "https://github.com" },
+  ];
+
   return (
-    <footer className="relative bg-black text-white  overflow-hidden">
-      <div className="absolute top-0 left-0 w-full ">
+    <footer className="relative bg-black text-white overflow-hidden">
+      <div className="absolute top-0 left-0 w-full">
         <svg
           viewBox="0 0 1440 320"
           className="w-full h-32"
@@ -66,7 +51,6 @@ const Footer = () => {
               <stop offset="100%" stopColor="#ff0000" />
             </linearGradient>
           </defs>
-
           <path
             fill="url(#waveGradient)"
             d="M0,160L60,138.7C120,117,240,75,360,80C480,85,600,139,720,154.7C840,171,960,149,1080,133.3C1200,117,1320,107,1380,101.3L1440,96V0H0Z"
@@ -82,7 +66,6 @@ const Footer = () => {
               "
             />
           </path>
-
           <path
             fill="rgba(255,0,0,0.3)"
             d="M0,200L80,180C160,160,320,120,480,130C640,140,800,200,960,210C1120,220,1280,180,1360,160L1440,140V0H0Z"
@@ -119,12 +102,7 @@ const Footer = () => {
           </p>
 
           <div className="flex gap-4 mt-4">
-            {[
-              { Icon: FaFacebookF, href: "https://facebook.com" },
-              { Icon: FaTwitter, href: "https://twitter.com" },
-              { Icon: FaLinkedinIn, href: "https://linkedin.com" },
-              { Icon: FaGithub, href: "https://github.com" },
-            ].map(({ Icon, href }, i) => (
+            {socialLinks.map(({ Icon, href }, i) => (
               <a
                 key={i}
                 href={href}
@@ -138,31 +116,24 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* ################################################### */}
+        {/* Services Section with correct links */}
         <div>
           <h3 className="font-semibold text-lg mb-4 text-red-500 tracking-wide">
             Services
           </h3>
           <ul className="space-y-2 text-sm">
-            {[
-              "Web Development",
-              "AI / ML Solutions",
-              "E-Commerce Platforms",
-              "UI / UX Design",
-            ].map((item, i) => (
+            {services.map(({ name, to }, i) => (
               <li key={i}>
                 <Link
-                  to="/services"
+                  to={to}
                   className="hover:text-red-400 transition duration-300"
                 >
-                  {item}
+                  {name}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
-
-        {/* ####################################################################### */}
 
         <div>
           <h3 className="font-semibold text-lg mb-4 text-white tracking-wide">
@@ -187,7 +158,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* #################################################### */}
         <div>
           <h3 className="font-semibold text-lg mb-4 text-red-500 tracking-wide">
             Get in Touch
@@ -207,7 +177,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* ############################################################# */}
       <div className="border-t border-white/10 py-6 text-center text-sm text-gray-400">
         <p>
           © 2026 <span className="text-white font-medium">SoftNova Tech</span>.

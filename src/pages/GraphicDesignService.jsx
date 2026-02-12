@@ -1,45 +1,67 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import graphicImg from "../assets/hero-4.jpg";
+import ServiceBlock from "./ServiceBlock";
 
-const GraphicsService = () => {
+import heroImg from "../assets/graphic design.jpg";
+import brandingImg from "../assets/Bg-1.png";
+import uiuxImg from "../assets/19389.jpg";
+import marketingImg from "../assets/Bg-10.png";
+
+const GraphicDesignService = () => {
   return (
     <>
-      <section className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-red-900 text-white">
+      <section className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-red-900 text-white">
+        {/* HERO */}
         <div
           className="relative h-96 bg-cover bg-center flex items-center justify-center"
-          style={{ backgroundImage: `url(${graphicImg})` }}
+          style={{ backgroundImage: `url(${heroImg})` }}
         >
-          <div className="absolute inset-0 bg-black/60"></div>
-          <h1 className="relative z-10 text-4xl md:text-6xl font-bold text-red-600 text-center">
-            Graphics Designing
+          <div className="absolute inset-0 bg-black/70"></div>
+          <h1 className="relative z-10 text-5xl font-bold text-red-600">
+            Graphic Design Services
           </h1>
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 py-16 text-center">
-          <p className="text-gray-300 text-lg leading-relaxed mb-8">
-            Branding, UI/UX design, and marketing visuals crafted for a modern and professional look.
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <p className="text-center text-gray-300 text-lg mb-20 max-w-3xl mx-auto">
+            We create stunning visual designs that strengthen your brand
+            identity, enhance user experience, and drive engagement.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {[
-              { title: "Branding", desc: "Unique logos and brand identity.", icon: "🎨" },
-              { title: "UI/UX Design", desc: "Beautiful and functional interfaces.", icon: "🖌️" },
-              { title: "Marketing Visuals", desc: "Social media and promotional graphics.", icon: "📢" },
-            ].map((feature, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl shadow-lg hover:scale-105 transition-transform duration-500">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
+          <ServiceBlock title="Branding Design" image={brandingImg}>
+            <ul className="list-disc ml-5 space-y-2">
+              <li>Logo & corporate identity</li>
+              <li>Business cards & stationery</li>
+              <li>Brand guidelines & visual assets</li>
+            </ul>
+          </ServiceBlock>
 
-          <div className="mt-12">
+          <ServiceBlock title="UI/UX Design" image={uiuxImg} reverse>
+            <ul className="list-disc ml-5 space-y-2">
+              <li>Web & mobile interface design</li>
+              <li>Wireframes & prototypes</li>
+              <li>User-centered experience</li>
+            </ul>
+          </ServiceBlock>
+
+          <ServiceBlock title="Marketing Design" image={marketingImg}>
+            <ul className="list-disc ml-5 space-y-2">
+              <li>Social media visuals</li>
+              <li>Promotional graphics & banners</li>
+              <li>Infographics & presentation design</li>
+            </ul>
+          </ServiceBlock>
+
+          <div className="text-center mt-10 flex justify-center gap-4">
+            <Link to="/contact">
+              <button className="bg-red-600 px-8 py-3 rounded-full hover:bg-red-700">
+                Order Service
+              </button>
+            </Link>
+
             <Link to="/services">
-              <button className="bg-red-600 px-6 py-3 rounded-full hover:bg-red-700 transition text-white font-semibold">
-                Back to Services
+              <button className="border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black">
+                Back
               </button>
             </Link>
           </div>
@@ -51,4 +73,4 @@ const GraphicsService = () => {
   );
 };
 
-export default GraphicsService;
+export default GraphicDesignService;
