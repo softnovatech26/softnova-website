@@ -12,8 +12,8 @@ import WordPressService from "./pages/WordPressService";
 import ITService from "./pages/ITService";
 import GraphicsService from "./pages/GraphicDesignService";
 import Contact from "./pages/Contact";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+// import Login from "./pages/Login";
+// import Signup from "./pages/Signup";
 
 import Mission from "./pages/Mission";
 import Vision from "./pages/Vision";
@@ -23,7 +23,7 @@ import PythonAI from "./pages/portfolio/PythonAI";
 import Graphics from "./pages/portfolio/Graphics";
 import PythonService from "./pages/PythonService";
 
-import Dashboard from "./pages/Dashboard";
+// import Dashboard from "./pages/Dashboard";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -59,11 +59,11 @@ function App() {
         <Route path="/mission" element={<Mission />} />
         <Route path="/vision" element={<Vision />} />
         {/* Auth Pages */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/signup" element={<Signup />} /> */}
 
         {/* Admin Dashboard */}
-        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
       </Routes>
 
       {/* Website Footer */}

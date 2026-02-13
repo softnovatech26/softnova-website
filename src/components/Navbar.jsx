@@ -26,7 +26,7 @@ const Navbar = () => {
         </Link>
 
         {/* DESKTOP MENU */}
-        <ul className="hidden md:flex items-center gap-10">
+        <ul className="hidden md:flex items-center gap-10 ">
 
           {/* HOME */}
           <li>
@@ -84,15 +84,7 @@ const Navbar = () => {
                   Graphics Designing
                 </Link>
               </li>
-               {/* <li>
-                <Link
-                  to="/portfolio/student"
-                  className="block px-5 py-2 text-sm text-white
-                  hover:bg-red-600/20 hover:text-red-400 transition rounded-lg"
-                >
-                  Students Final Year Projects
-                </Link>
-              </li> */}
+              
 
             </ul>
             
@@ -152,16 +144,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* LOGIN */}
-        <div className="hidden md:block">
-          <Link
-            to="/login"
-            className="px-6 py-2 rounded-full bg-red-600 text-white font-semibold
-            shadow-lg hover:bg-red-500 hover:scale-105 transition"
-          >
-            Login
-          </Link>
-        </div>
+        
 
         {/* MOBILE TOGGLE */}
         <button
