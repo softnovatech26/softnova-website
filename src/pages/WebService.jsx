@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import webImg from "../assets/webdevelopmentS.jpg";
+import webImg from "../assets/Web-Developement-2.png";
 import { motion } from "framer-motion";
 import reactImg from "../assets/react Js.jpg";
 import bootstrapImg from "../assets/bootsrap.jpg";
@@ -119,12 +119,16 @@ const WebService = () => {
               <li>Modern UI standards</li>
             </ul>
           </ServiceBlock>
+          <div className="text-center mt-10 flex justify-center gap-4">
+            <Link to="/contact">
+              <button className="bg-red-600 px-8 py-3 rounded-full hover:bg-red-700">
+                Order Service
+              </button>
+            </Link>
 
-          {/* CTA */}
-          <div className="text-center mt-8">
             <Link to="/services">
-              <button className="bg-red-600 px-8 py-3 rounded-full hover:bg-red-700 transition font-semibold shadow-lg">
-                Back to Services
+              <button className="border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black">
+                Back
               </button>
             </Link>
           </div>
