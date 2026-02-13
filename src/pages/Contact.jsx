@@ -24,10 +24,10 @@ const Contact = () => {
             >
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
               <a
-                href="mailto:info@softnovatech.com"
+                href="mailto:softnovatech.pk@gmail.com"
                 className="text-red-600 hover:underline"
               >
-                info@softnovatech.com
+                softnovatech.pk@gmail.com
               </a>
             </div>
 
@@ -59,7 +59,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="text-red-600 hover:underline"
               >
-                SoftNova Tech, Karachi, Pakistan
+                SoftNova Tech, Hala New, Pakistan
               </a>
             </div>
           </div>
