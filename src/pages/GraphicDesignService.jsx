@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import ServiceBlock from "./ServiceBlock";
 
-import heroImg from "../assets/graphic design.jpg";
-import brandingImg from "../assets/Bg-1.png";
-import uiuxImg from "../assets/19389.jpg";
-import marketingImg from "../assets/Bg-10.png";
+import heroImg from "../assets/designs.jpg";
+import brandingImg from "../assets/Branding Design.jpg";
+import uiuxImg from "../assets/gradient-ui-ux.jpg";
+import marketingImg from "../assets/Marketing Design.png";
 
 const GraphicDesignService = () => {
   return (

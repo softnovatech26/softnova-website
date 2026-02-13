@@ -51,7 +51,24 @@ const Home = () => {
           <p className="mt-6 font-montserrat text-gray-300 text-lg leading-relaxed">
             Delivering innovative software solutions for modern businesses.
           </p>
+          <div className="mt-10 flex justify-center">
+  <a
+    href="/contact"
+    className="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-semibold text-white transition-all duration-300 rounded-full group bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-600 shadow-lg hover:shadow-[0_0_25px_rgba(239,68,68,0.6)]"
+  >
+    <span className="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-10 transition duration-300"></span>
+
+    <span className="relative flex items-center gap-2">
+      Order Project
+      <span className="transition-transform duration-300 group-hover:translate-x-1">
+        →
+      </span>
+    </span>
+  </a>
+</div>
+
         </div>
+       
       </section>
 
       <section className="relative bg-[#050b1a] py-20 px-6 overflow-hidden">

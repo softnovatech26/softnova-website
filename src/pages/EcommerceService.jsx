@@ -3,9 +3,9 @@ import Footer from "../components/Footer";
 import ServiceBlock from "./ServiceBlock";
 
 import heroImg from "../assets/e-commers.jpg";
-import storeImg from "../assets/hero-4.jpg";
-import paymentImg from "../assets/v796-nunny-03b.jpg";
-import analyticsImg from "../assets/19389.jpg";
+import storeImg from "../assets/Custom Online Stores.jpg";
+import paymentImg from "../assets/Payment Integration.jpg";
+import analyticsImg from "../assets/Analytics & Reports.jpg";
 
 const EcommerceService = () => {
   return (

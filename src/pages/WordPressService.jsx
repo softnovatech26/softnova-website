@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import wordpressImg from "../assets/wordpress-theme2.jpg";
 
-import themeImg from "../assets/19389.jpg";
+import themeImg from "../assets/Custom Themes.jpg";
 import pluginImg from "../assets/wordpressplugin.jpg";
-import seoImg from "../assets/3409297.jpg";
+import seoImg from "../assets/SEO Optimization.jpg";
 
 const features = [
   {
