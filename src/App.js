@@ -12,8 +12,6 @@ import WordPressService from "./pages/WordPressService";
 import ITService from "./pages/ITService";
 import GraphicsService from "./pages/GraphicDesignService";
 import Contact from "./pages/Contact";
-// import Login from "./pages/Login";
-// import Signup from "./pages/Signup";
 
 import Mission from "./pages/Mission";
 import Vision from "./pages/Vision";
@@ -58,9 +56,6 @@ function App() {
 
         <Route path="/mission" element={<Mission />} />
         <Route path="/vision" element={<Vision />} />
-        {/* Auth Pages */}
-        {/* <Route path="/login" element={<Login />} /> */}
-        {/* <Route path="/signup" element={<Signup />} /> */}
 
         {/* Admin Dashboard */}
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
