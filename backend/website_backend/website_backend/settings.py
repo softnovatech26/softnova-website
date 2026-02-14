@@ -1,12 +1,17 @@
-import pymysql
-pymysql.install_as_MySQLdb()
-
+import os
 from pathlib import Path
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-d14xq)df@ai6s*y3nd6u%yxm4&+4ooi=c+ur83j0z(=+j#f*c!'
-DEBUG = True
+# Load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv(os.path.join(BASE_DIR, '..', '.env'))
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-d14xq)df@ai6s*y3nd6u%yxm4&+4ooi=c+ur83j0z(=+j#f*c!')
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
@@ -51,12 +56,8 @@ TEMPLATES = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'softnova_db',       
-        'USER': 'root',               
-        'PASSWORD': 'faiza123',  
-        'HOST': 'localhost',
-        'PORT': '3305',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / os.getenv('DB_NAME', 'db.sqlite3'),       
     }
 }
 
@@ -84,12 +85,12 @@ STATIC_URL = 'static/'
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'softnovatech.pk@gmail.com'
-EMAIL_HOST_PASSWORD = 'aott pnlh ketk xwij'  # Use app password, not regular password
-DEFAULT_FROM_EMAIL = 'softnovatech.pk@gmail.com'
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.getenv('EMAIL_PORT', '587'))
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True').lower() == 'true'
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
