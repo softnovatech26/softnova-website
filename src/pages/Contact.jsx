@@ -128,20 +128,22 @@ const Contact = () => {
                 className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600"
               />
             </div>
-
+            <div> <label className="block text-gray-300 mb-2">Email</label> <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" required className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600" /> </div>
             <div>
-              <label className="block text-gray-300 mb-2">Email</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="you@example.com"
-                required
-                className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600"
-              />
-            </div>
+          <label className="block text-gray-300 mb-2">Contact Number</label>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="Enter your phone number"
+            required
+            className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600"
+          />
+        </div>
 
+
+            
             <div>
               <label className="block text-gray-300 mb-2">Message</label>
               <textarea
