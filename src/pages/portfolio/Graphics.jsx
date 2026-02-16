@@ -12,7 +12,7 @@ import design9 from "../../assets/Graphics Project/mou.jpg";
 import design10 from "../../assets/Graphics Project/pro2.png";
 import design11 from "../../assets/Graphics Project/pro4.png";
 import design12 from "../../assets/Graphics Project/pro5.png";
-
+import Footer from "../../components/Footer";
 const GraphicsDesign = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -32,6 +32,8 @@ const GraphicsDesign = () => {
   ];
 
   return (
+
+    <>
     <section className="relative min-h-screen bg-black text-white py-24 px-6 overflow-hidden">
       <div className="absolute top-0 left-0 w-96 h-96 bg-red-600/30 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-purple-600/30 rounded-full blur-3xl"></div>
@@ -99,6 +101,9 @@ const GraphicsDesign = () => {
         )}
       </AnimatePresence>
     </section>
+    
+    <Footer />
+    </>
   );
 };
 
