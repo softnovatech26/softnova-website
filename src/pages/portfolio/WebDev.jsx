@@ -1,59 +1,94 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import design1 from "../../assets/Webpro/pro-1.jpeg";
 import design2 from "../../assets/Webpro/pro-2.jpeg";
 import design3 from "../../assets/Webpro/pro-3.jpeg";
 import design4 from "../../assets/Webpro/Pro-4.jpeg";
-
-const GraphicsDesign = () => {
+import Footer from "../../components/Footer";
+const WebDev = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    design1, design2, design3, design4
+    { src: design1, title: "Business Website" },
+    { src: design2, title: "Portfolio Website" },
+    { src: design3, title: "Landing Page UI" },
+    { src: design4, title: "Admin Dashboard" },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 py-20 px-6">
+    <>
+      <section className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-red-900 text-white py-24 px-6 overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-[420px] h-[420px] bg-orange-500/30 rounded-full blur-3xl"></div>
 
-      <h1 className="text-5xl font-bold text-center mb-12">
-        Web development & Web desiging Project
-      </h1>
+        <div className="max-w-6xl mx-auto text-center mb-20 relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Web Development <span className="text-red-500">Projects</span>
+          </h1>
 
-      <p className="text-2xl text-center text-purple-600 mb-12 max-w-xl mx-auto">
-       We’ve done lot’s of work, Let’s Check <br />some from here Projects
-         </p>
-
-
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition h-72"
-          >
-            <img
-              src={img}
-              alt="Graphic Design"
-              onClick={() => setSelectedImage(img)}
-              className="w-full h-full object-cover cursor-pointer hover:scale-110 transition duration-300"
-            />
-          </div>
-        ))}
-      </div>
-
-      {/* FULLSCREEN IMAGE MODAL */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
-          onClick={() => setSelectedImage(null)}
-        >
-          <img
-            src={selectedImage}
-            alt="Full Preview"
-            className="max-w-[90%] max-h-[90%] object-contain"
-          />
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+            Explore our modern websites, dashboards, and responsive UI systems
+            built using React, Tailwind, and scalable frontend architecture.
+          </p>
         </div>
-      )}
-    </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto relative z-10">
+          {images.map((img, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ y: -8 }}
+              className="group relative bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-xl cursor-pointer"
+              onClick={() => setSelectedImage(img)}
+            >
+              <img
+                src={img.src}
+                alt={img.title}
+                className="w-full h-80 object-cover transition duration-700 group-hover:scale-110"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-6">
+                <h3 className="text-white text-xl font-semibold">
+                  {img.title}
+                </h3>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <AnimatePresence>
+          {selectedImage && (
+            <motion.div
+              className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <motion.div
+                initial={{ scale: 0.8 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.8 }}
+                className="relative"
+              >
+                <img
+                  src={selectedImage.src}
+                  alt="Preview"
+                  className="max-w-[95vw] max-h-[90vh] rounded-2xl shadow-2xl"
+                />
+
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute -top-4 -right-4 bg-red-600 hover:bg-red-700 text-white w-10 h-10 rounded-full shadow-lg"
+                >
+                  ✕
+                </button>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </section>
+      <Footer />
+    </>
   );
 };
 
-export default GraphicsDesign;
+export default WebDev;
