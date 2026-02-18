@@ -1,20 +1,21 @@
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAdminUser
 from rest_framework.response import Response
 from django.core.mail import send_mail, EmailMessage
-from django.template.loader import render_to_string
 from .models import ContactForm
 from .serializers import ContactFormSerializer
 
+
 def send_admin_notification(contact):
     """Send email notification to admin"""
-    subject = f"New Contact Form Submission: {contact.name}"
+    subject = f"New Email From: {contact.name}"
     message = f"""
-    New contact form submission received:
+    New contact submission received:
     
     Name: {contact.name}
     Email: {contact.email}
+    Phone: {contact.phone}
     Message: {contact.message}
     
     Submitted at: {contact.created_at}
@@ -26,9 +27,10 @@ def send_admin_notification(contact):
         subject,
         message,
         'softnovatech.pk@gmail.com',
-        ['softnovatech.pk@gmail.com'],  # Admin email
+        ['softnovatech.pk@gmail.com'],
         fail_silently=False,
     )
+
 
 def send_auto_reply(contact):
     """Send automatic reply to user"""
@@ -54,9 +56,10 @@ def send_auto_reply(contact):
         subject,
         message,
         'softnovatech.pk@gmail.com',
-        [contact.email],  # User's email
+        [contact.email],
     )
     email.send()
+
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
@@ -65,7 +68,6 @@ def contact_submit(request):
     if serializer.is_valid():
         contact = serializer.save()
         
-        # Send emails
         try:
             send_admin_notification(contact)
             send_auto_reply(contact)
@@ -84,7 +86,9 @@ def contact_submit(request):
             'errors': serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
 
+
 @api_view(['GET'])
+@permission_classes([IsAdminUser])
 def contact_list(request):
     contacts = ContactForm.objects.all().order_by('-created_at')
     serializer = ContactFormSerializer(contacts, many=True)

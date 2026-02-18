@@ -5,6 +5,7 @@ class ContactForm(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField()
+    phone = models.CharField(max_length=15, default='0')
     created_at = models.DateTimeField(default=timezone.now)
     is_read = models.BooleanField(default=False)
 
