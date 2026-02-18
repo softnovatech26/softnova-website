@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#Backend stuff
+backend/venv/
+backend/.env
+backend/website_backend/db.sqlite3
+
