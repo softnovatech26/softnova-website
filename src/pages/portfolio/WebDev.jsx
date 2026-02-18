@@ -1,10 +1,21 @@
 import { useState } from "react";
+import Footer from "../../components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import design1 from "../../assets/Webpro/pro-1.jpeg";
 import design2 from "../../assets/Webpro/pro-2.jpeg";
 import design3 from "../../assets/Webpro/pro-3.jpeg";
 import design4 from "../../assets/Webpro/Pro-4.jpeg";
-import Footer from "../../components/Footer";
+import design5 from "../../assets/Webpro/pro 5.jpeg";
+import design6 from "../../assets/Webpro/pro 6.jpeg";
+import design7 from "../../assets/Webpro/pro 7.jpeg";
+import design8 from "../../assets/Webpro/pro 8.jpeg";
+import design9 from "../../assets/Webpro/pro 9.jpeg";
+import design10 from "../../assets/Webpro/pro 10.jpeg";
+import design11 from "../../assets/Webpro/pro 11.jpeg";
+import design12 from "../../assets/Webpro/pro 12.jpeg";
+import design13 from "../../assets/Webpro/pro 13.jpeg";
+import design14 from "../../assets/Webpro/pro 14.jpeg";
+     
 const WebDev = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -13,6 +24,16 @@ const WebDev = () => {
     { src: design2, title: "Portfolio Website" },
     { src: design3, title: "Landing Page UI" },
     { src: design4, title: "Admin Dashboard" },
+    { src: design5, title: "E-commerce Website" },
+    { src: design6, title: "Mobile App UI" },
+    { src: design7, title: "Blog Website" },
+    { src: design8, title: "SaaS Dashboard" },
+    { src: design9, title: "Personal Portfolio" },
+    { src: design10, title: "Creative Agency" },
+    { src: design11, title: "Tech Startup" },
+    { src: design12, title: "Event Website" },
+    { src: design13, title: "Restaurant Website" },
+    { src: design14, title: "Fitness App UI" },
   ];
 
   return (

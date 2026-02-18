@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import Hasseb from "../assets/Haseeb.jpg";
 import Kumail from "../assets/Kumail.jpg";
-// import faiza from "../assets/Faiza.jpeg";
 import Shahnaz from "../assets/Shahnaz.jpeg";
 import Ramsha from "../assets/Ramsha.jpg"; 
 import Mairaj from "../assets/Mairaj.jpeg";
@@ -36,11 +35,7 @@ const team = [
     role: "Backend Developer",
     image: Shahnaz,
   },
-  // {
-  //   name: "Faiza Soomro",
-  //   role: "Backend Developer",
-  //   image: faiza,
-  // },
+
   {
     name: "Muhammad Mairaj",
     role: "Junior Frontend Developer",
