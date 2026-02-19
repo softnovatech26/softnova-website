@@ -12,7 +12,6 @@ const Navbar = () => {
     <nav className="relative top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-red-500/30">
       {/* MAIN BAR */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between relative z-10">
-        
         {/* LOGO */}
         <Link to="/" className="flex items-center gap-3 group">
           <img
@@ -27,7 +26,6 @@ const Navbar = () => {
 
         {/* DESKTOP MENU */}
         <ul className="hidden md:flex items-center gap-10 ">
-
           {/* HOME */}
           <li>
             <Link
@@ -84,10 +82,7 @@ const Navbar = () => {
                   Graphics Designing
                 </Link>
               </li>
-              
-
             </ul>
-            
           </li>
 
           {/* SERVICES */}
@@ -144,8 +139,6 @@ const Navbar = () => {
           </li>
         </ul>
 
-        
-
         {/* MOBILE TOGGLE */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -157,7 +150,11 @@ const Navbar = () => {
 
       {/* NAVBAR WAVE */}
       <div className="absolute bottom-[15px] left-0 w-full pointer-events-none">
-        <svg viewBox="0 0 1440 90" className="w-full h-[70px]" preserveAspectRatio="none">
+        <svg
+          viewBox="0 0 1440 90"
+          className="w-full h-[70px]"
+          preserveAspectRatio="none"
+        >
           <defs>
             <linearGradient id="navbarWave" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0%" stopColor="#000000" />
@@ -190,22 +187,141 @@ const Navbar = () => {
         </svg>
       </div>
 
-      {/* MOBILE MENU (UNCHANGED) */}
       {menuOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-red-500/20 px-6 py-6">
-          <ul className="flex flex-col gap-4">
-            {["Home", "Portfolio", "Services", "Contact"].map((item) => (
-              <li key={item}>
+        <div className="md:hidden relative z-10">
+          {/* MOBILE WAVE ON TOP */}
+          <div className=" absolute -top-14 left-0 w-full pointer-events-none -translate-y-6 ">
+            <svg
+              viewBox="0 0 1440 90"
+              className="w-full h-[40px]"
+              preserveAspectRatio="none"
+            >
+              <defs>
+                <linearGradient
+                  id="navbarWaveMobileTop"
+                  x1="0"
+                  y1="0"
+                  x2="1"
+                  y2="0"
+                >
+                  <stop offset="0%" stopColor="#000000" />
+                  <stop offset="50%" stopColor="#b31217" />
+                  <stop offset="100%" stopColor="#ff0000" />
+                </linearGradient>
+              </defs>
+              <path
+                fill="url(#navbarWaveMobileTop)"
+                fillOpacity="0.9"
+                d="M0,40 C120,60 240,20 360,30 480,40 600,70 720,60
+               840,50 960,30 1080,35 1200,40 1320,55 1440,45
+               L1440,0 L0,0 Z"
+              ></path>
+            </svg>
+          </div>
+
+          {/* MOBILE NAVBAR BACKGROUND */}
+          <div className="bg-black/95 backdrop-blur-xl border-t border-red-500/20 px-6 py-6 rounded-b-xl relative z-10">
+            <ul className="flex flex-col gap-4">
+              {/* HOME */}
+              <li>
                 <Link
-                  to={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
+                  to="/"
                   className="text-white font-medium hover:text-red-400 transition"
                   onClick={() => setMenuOpen(false)}
                 >
-                  {item}
+                  Home
                 </Link>
               </li>
-            ))}
-          </ul>
+
+              {/* PORTFOLIO DROPDOWN */}
+              <li>
+                <button
+                  onClick={() => setPortfolioOpen(!portfolioOpen)}
+                  className="w-full flex justify-between items-center text-white font-medium hover:text-red-400 transition"
+                >
+                  Portfolio <FiChevronDown />
+                </button>
+                {portfolioOpen && (
+                  <ul className="mt-2 ml-4 flex flex-col gap-2">
+                    <li>
+                      <Link
+                        to="/portfolio/web"
+                        className="block px-4 py-2 text-white hover:text-red-400 transition rounded-lg"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        Web Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/portfolio/python-ai"
+                        className="block px-4 py-2 text-white hover:text-red-400 transition rounded-lg"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        Python & AI
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/portfolio/graphics"
+                        className="block px-4 py-2 text-white hover:text-red-400 transition rounded-lg"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        Graphics Designing
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
+
+              {/* SERVICES */}
+              <li>
+                <Link
+                  to="/services"
+                  className="text-white font-medium hover:text-red-400 transition"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Services
+                </Link>
+              </li>
+
+              {/* CONTACT */}
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-white font-medium hover:text-red-400 transition"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+              </li>
+
+              {/* COMPANY DROPDOWN */}
+              <li>
+                <button
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className="w-full flex justify-between items-center text-white font-medium hover:text-red-400 transition"
+                >
+                  Company <FiChevronDown />
+                </button>
+                {dropdownOpen && (
+                  <ul className="mt-2 ml-4 flex flex-col gap-2">
+                    {["About", "Mission", "Vision"].map((item) => (
+                      <li key={item}>
+                        <Link
+                          to={`/${item.toLowerCase()}`}
+                          className="block px-4 py-2 text-white hover:text-red-400 transition rounded-lg"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {item}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            </ul>
+          </div>
         </div>
       )}
     </nav>
