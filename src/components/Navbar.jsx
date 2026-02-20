@@ -26,7 +26,7 @@ const Navbar = () => {
 
         {/* DESKTOP MENU */}
         <ul className="hidden md:flex items-center gap-10 ">
-          {/* HOME */}
+     
           <li>
             <Link
               to="/"
@@ -38,7 +38,7 @@ const Navbar = () => {
             </Link>
           </li>
 
-          {/* 🔥 PORTFOLIO (DROPDOWN – SAME AS ABOUT) */}
+   
           <li
             className="relative"
             onMouseEnter={() => setPortfolioOpen(true)}
@@ -109,7 +109,7 @@ const Navbar = () => {
             </Link>
           </li>
 
-          {/* ABOUT (NO CHANGE) */}
+        
           <li
             className="relative"
             onMouseEnter={() => setDropdownOpen(true)}
@@ -139,7 +139,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* MOBILE TOGGLE */}
+
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-white text-2xl"
@@ -148,7 +148,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* NAVBAR WAVE */}
+
       <div className="absolute bottom-[15px] left-0 w-full pointer-events-none">
         <svg
           viewBox="0 0 1440 90"
@@ -189,7 +189,7 @@ const Navbar = () => {
 
       {menuOpen && (
         <div className="md:hidden relative z-10">
-          {/* MOBILE WAVE ON TOP */}
+
           <div className=" absolute -top-14 left-0 w-full pointer-events-none -translate-y-6 ">
             <svg
               viewBox="0 0 1440 90"
@@ -219,7 +219,6 @@ const Navbar = () => {
             </svg>
           </div>
 
-          {/* MOBILE NAVBAR BACKGROUND */}
           <div className="bg-black/95 backdrop-blur-xl border-t border-red-500/20 px-6 py-6 rounded-b-xl relative z-10">
             <ul className="flex flex-col gap-4">
               {/* HOME */}
