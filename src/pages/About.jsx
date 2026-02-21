@@ -12,7 +12,7 @@ import Yasir from "../assets/Yasir .jpeg"
 const team = [
   {
     name: "Haseeb ul Hassan",
-    role: "Founder & CEO",
+    role: "Project Manager",
     image: Hasseb,
   },
   {

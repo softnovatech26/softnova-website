@@ -104,7 +104,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="text-red-600 hover:underline"
               >
-                SoftNova Tech, Hala New, Pakistan
+                SoftNova Tech Remote Based_Sindh,Pakistan
               </a>
             </div>
           </div>

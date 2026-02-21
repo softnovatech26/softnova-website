@@ -4,6 +4,15 @@ import design1 from "../../assets/Pypro/pro-1.jpeg";
 import design2 from "../../assets/Pypro/pro-2.jpeg";
 import design3 from "../../assets/Pypro/pro-3.jpeg";
 import design4 from "../../assets/Pypro/Pro-4.jpeg";
+import design5 from "../../assets/Pypro/pro 5.jpeg";
+import design6 from "../../assets/Pypro/pro 6.jpeg";
+import design7 from "../../assets/Pypro/pro 7.jpeg";
+import design8 from "../../assets/Pypro/pro 8.jpeg";
+import design9 from "../../assets/Pypro/pro 9.jpeg";
+import design10 from "../../assets/Pypro/pro 10.jpeg"; 
+import design11 from "../../assets/Pypro/pro 11.jpeg";
+import design12 from "../../assets/Pypro/pro 12.jpeg";
+import design13 from "../../assets/Pypro/pro 13.jpeg";  
 import Footer from "../../components/Footer";
 const PythonAI = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -13,6 +22,15 @@ const PythonAI = () => {
     { src: design2, title: "Data Analytics Dashboard" },
     { src: design3, title: "Student Management System" },
     { src: design4, title: "School Management System" },
+    { src: design5, title: "AI-Powered Chatbot" },
+    { src: design6, title: "Microsoft AI Assistant" },
+    { src: design7, title: "Salary Analytics production" },
+    { src: design8, title: "Buyhitick AI" },
+    { src: design9, title: "Traffic Analytics System" },
+    { src: design10, title: "AI Photo Editor" },
+    { src: design11, title: "AI-Powered Image Recognition" },
+    { src: design12, title: "AI Video Editor" },
+    { src: design13, title: "MAchine Learning Model" },
   ];
 
   return (
