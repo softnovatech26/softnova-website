@@ -21,6 +21,9 @@ import PythonAI from "./pages/portfolio/PythonAI";
 import Graphics from "./pages/portfolio/Graphics";
 import PythonService from "./pages/PythonService";
 
+import AiToolLaunchBlog from "./pages/AiToolLaunchBlog";
+import WebDevelopmentTrendsBlog from "./pages/WebDevelopmentTrendsBlog";
+import EcommerceGrowthBlog from "./pages/EcommerceGrowthBlog";
 // import Dashboard from "./pages/Dashboard";
 
 // Components
@@ -56,6 +59,13 @@ function App() {
 
         <Route path="/mission" element={<Mission />} />
         <Route path="/vision" element={<Vision />} />
+
+
+          {/* Blog Routes */} 
+        <Route path="/ai-tool-launch" element={<AiToolLaunchBlog />} />
+        <Route path="/web-development-trends" element={<WebDevelopmentTrendsBlog />} />
+        <Route path="/ecommerce-growth" element={<EcommerceGrowthBlog />} /> 
+
 
         {/* Admin Dashboard */}
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}

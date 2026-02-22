@@ -52,23 +52,21 @@ const Home = () => {
             Delivering innovative software solutions for modern businesses.
           </p>
           <div className="mt-10 flex justify-center">
-  <a
-    href="/contact"
-    className="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-semibold text-white transition-all duration-300 rounded-full group bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-600 shadow-lg hover:shadow-[0_0_25px_rgba(239,68,68,0.6)]"
-  >
-    <span className="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-10 transition duration-300"></span>
+            <a
+              href="/contact"
+              className="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-semibold text-white transition-all duration-300 rounded-full group bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-600 shadow-lg hover:shadow-[0_0_25px_rgba(239,68,68,0.6)]"
+            >
+              <span className="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-10 transition duration-300"></span>
 
-    <span className="relative flex items-center gap-2">
-      Order Project
-      <span className="transition-transform duration-300 group-hover:translate-x-1">
-        →
-      </span>
-    </span>
-  </a>
-</div>
-
+              <span className="relative flex items-center gap-2">
+                Order Project
+                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </span>
+            </a>
+          </div>
         </div>
-       
       </section>
 
       <section className="relative bg-[#050b1a] py-20 px-6 overflow-hidden">
@@ -200,13 +198,13 @@ const Home = () => {
         <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-3">
           {[
             {
-              title: "SoftNova Launches New AI Tool",
+              title: "AI Tool",
               description:
                 "Discover how our latest AI product is reshaping digital business automation.",
               image:
                 "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
               category: "AI",
-              link: "/blog/ai-tool-launch",
+              link: "/ai-tool-launch",
             },
             {
               title: "Modern Web Development Trends",
@@ -215,7 +213,7 @@ const Home = () => {
               image:
                 "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200",
               category: "Development",
-              link: "/blog/web-development-trends",
+              link: "/web-development-trends",
             },
             {
               title: "E-Commerce Growth Strategies 2026",
@@ -224,7 +222,7 @@ const Home = () => {
               image:
                 "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1200",
               category: "E-Commerce",
-              link: "/blog/ecommerce-growth",
+              link: "/ecommerce-growth",
             },
           ].map((blog, i) => (
             <a
