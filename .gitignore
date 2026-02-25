@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #Backend stuff
-backend/venv/
-backend/.env
-backend/website_backend/db.sqlite3
+website_backend/venv/
+website_backend/.env
+website_backend/db.sqlite3
 

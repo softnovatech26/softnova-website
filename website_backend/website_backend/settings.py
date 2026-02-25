@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load environment variables from .env file
 from dotenv import load_dotenv
-load_dotenv(os.path.join(BASE_DIR, '..', '.env'))
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-d14xq)df@ai6s*y3nd6u%yxm4&+4ooi=c+ur83j0z(=+j#f*c!')
