@@ -4,10 +4,10 @@ import Footer from "../components/Footer";
 import Hasseb from "../assets/Haseeb.jpg";
 import Kumail from "../assets/Kumail.jpg";
 import Shahnaz from "../assets/Shahnaz.jpeg";
-import Ramsha from "../assets/Ramsha.jpg"; 
+import Ramsha from "../assets/Ramsha.png"; 
 import Mairaj from "../assets/Mairaj.jpeg";
-import Moosa from "../assets/my pic 5.png"
-import Yasir from "../assets/Yasir .jpeg"
+import Moosa from "../assets/Mosa.jpeg";
+import Yasir from "../assets/yasir.jpeg";
 
 const team = [
   {
