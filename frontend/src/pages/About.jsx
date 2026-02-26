@@ -13,7 +13,7 @@ import Rafay from "../assets/Rafay.png";
 const team = [
   {
     name: "Haseeb ul Hassan",
-    role: "Project Manager",
+    role: "Project Manager & Team Lead",
     image: Hasseb,
   },
   {
