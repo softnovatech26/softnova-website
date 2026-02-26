@@ -32,7 +32,7 @@ const team = [
     image: Kumail,
   },
   {
-    name: "Shahnaz",
+    name: "Shahnaz Aqsa",
     role: "Backend Developer",
     image: Shahnaz,
   },
