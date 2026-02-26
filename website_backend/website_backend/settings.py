@@ -1,3 +1,4 @@
+import dj_database_url
 import os
 from pathlib import Path
 
@@ -59,6 +60,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / os.getenv('DB_NAME', 'db.sqlite3'),       
     }
+}
+
+DATABASES = {
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 AUTH_PASSWORD_VALIDATORS = [
