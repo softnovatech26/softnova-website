@@ -1,13 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
-import Hasseb from "../assets/Haseeb.jpg";
+import Hasseb from "../assets/Haseeb.png";
 import Kumail from "../assets/Kumail.jpg";
 import Shahnaz from "../assets/Shahnaz.jpeg";
 import Ramsha from "../assets/Ramsha.png"; 
-import Mairaj from "../assets/Mairaj.jpeg";
+import Mairaj from "../assets/Mairaj.png";
 import Moosa from "../assets/Mosa.jpeg";
 import Yasir from "../assets/yasir.jpeg";
+import Rafay from "../assets/Rafay.png";
 
 const team = [
   {
@@ -35,6 +36,11 @@ const team = [
     role: "Backend Developer",
     image: Shahnaz,
   },
+   {
+    name: "Abdul Rafay",
+    role: "Frontend Developer",
+    image: Rafay,
+  },
 
   {
     name: "Muhammad Mairaj",
@@ -46,6 +52,7 @@ const team = [
     role: "Junior Frontend Developer",
     image: Ramsha,
   },
+ 
 ];
 
 const About = () => {
