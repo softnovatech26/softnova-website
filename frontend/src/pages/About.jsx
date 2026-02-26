@@ -141,12 +141,12 @@ const About = () => {
 
               <div className="flex gap-4">
                 <div className="bg-white/5 border border-white/10 rounded-xl px-5 py-3">
-                  <p className="text-red-500 font-bold text-xl">50+</p>
+                  <p className="text-red-500 font-bold text-xl">30+</p>
                   <p className="text-gray-400 text-sm">Projects</p>
                 </div>
 
                 <div className="bg-white/5 border border-white/10 rounded-xl px-5 py-3">
-                  <p className="text-red-500 font-bold text-xl">20+</p>
+                  <p className="text-red-500 font-bold text-xl">10+</p>
                   <p className="text-gray-400 text-sm">Clients</p>
                 </div>
               </div>
@@ -191,8 +191,8 @@ const About = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
-                { value: "50+", label: "Projects Delivered" },
-                { value: "20+", label: "Happy Clients" },
+                { value: "30+", label: "Projects Delivered" },
+                { value: "10+", label: "Happy Clients" },
                 { value: "2+", label: "Years Experience" },
                 { value: "24/7", label: "Support" },
               ].map((item, i) => (
