@@ -193,7 +193,7 @@ const About = () => {
               {[
                 { value: "50+", label: "Projects Delivered" },
                 { value: "20+", label: "Happy Clients" },
-                { value: "5+", label: "Years Experience" },
+                { value: "2+", label: "Years Experience" },
                 { value: "24/7", label: "Support" },
               ].map((item, i) => (
                 <motion.div
