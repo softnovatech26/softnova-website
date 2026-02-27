@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Hasseb from "../assets/Haseeb.png";
 import Kumail from "../assets/Kumail.jpg";
 import Shahnaz from "../assets/Shahnaz.jpeg";
-import Ramsha from "../assets/Ramsha.png"; 
+import Ramsha from "../assets/Ramsha.png";
 import Mairaj from "../assets/Mairaj.png";
 import Moosa from "../assets/Mosa.jpeg";
 import Yasir from "../assets/yasir.jpeg";
@@ -36,7 +36,7 @@ const team = [
     role: "Backend Developer",
     image: Shahnaz,
   },
-   {
+  {
     name: "Abdul Rafay",
     role: "Frontend Developer",
     image: Rafay,
@@ -52,7 +52,6 @@ const team = [
     role: "Junior Frontend Developer",
     image: Ramsha,
   },
- 
 ];
 
 const About = () => {
@@ -68,7 +67,6 @@ const About = () => {
           <div className="absolute inset-0 opacity-10 bg-[linear-gradient(#ffffff22_1px,transparent_1px),linear-gradient(90deg,#ffffff22_1px,transparent_1px)] bg-[size:40px_40px]" />
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-  
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -159,7 +157,6 @@ const About = () => {
               className="relative"
             >
               <div className="relative h-[320px] rounded-3xl bg-gradient-to-br from-red-700 via-black to-gray-900 border border-white/10 shadow-2xl backdrop-blur-xl p-6">
-        
                 <div className="space-y-4">
                   <div className="w-32 h-3 bg-red-600 rounded" />
                   <div className="w-48 h-3 bg-gray-600 rounded" />
@@ -216,55 +213,54 @@ const About = () => {
           </div>
         </section>
 
-      <section className="py-28 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden">
+        <section className="py-28 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden">
+          <div className="absolute -top-32 -left-32 w-96 h-96 bg-red-600/20 rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
 
-  <div className="absolute -top-32 -left-32 w-96 h-96 bg-red-600/20 rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
-  <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-16 text-white">
+              Our <span className="text-red-600">Great Team</span>
+            </h2>
 
-  <div className="max-w-7xl mx-auto px-6 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold mb-16 text-white">
-      Our <span className="text-red-600">Great Team</span>
-    </h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+              {team.map((member, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: i * 0.08 }}
+                  whileHover={{ y: -10 }}
+                  className="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-xl shadow-[0_0_40px_rgba(255,0,0,0.08)] hover:shadow-[0_0_50px_rgba(255,0,0,0.4)] transition-all duration-500"
+                >
+                  <div className="relative overflow-hidden h-72">
+                    <img
+                      src={member.image || "https://via.placeholder.com/400"}
+                      alt={member.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    />
 
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
-      {team.map((member, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: i * 0.08 }}
-          whileHover={{ y: -10 }}
-          className="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-xl shadow-[0_0_40px_rgba(255,0,0,0.08)] hover:shadow-[0_0_50px_rgba(255,0,0,0.4)] transition-all duration-500"
-        >
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-80 transition-all duration-500"></div>
 
-          <div className="relative overflow-hidden h-72">
-            <img
-              src={member.image || "https://via.placeholder.com/400"}
-              alt={member.name}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-110"
-            />
+                    <div className="absolute bottom-0 left-0 right-0 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 p-4">
+                      <p className="text-red-400 font-bold  tracking-wide">
+                        {member.role}
+                      </p>
+                    </div>
+                  </div>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-80 transition-all duration-500"></div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-semibold text-white">
+                      {member.name}
+                    </h3>
+                    <div className="w-0 group-hover:w-14 h-[2px] bg-red-600 mt-3 transition-all duration-500 mx-auto" />
+                  </div>
 
-
-            <div className="absolute bottom-0 left-0 right-0 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 p-4">
-              <p className="text-red-500 text-sm tracking-wide">{member.role}</p>
+                  <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition pointer-events-none bg-gradient-to-br from-red-600/10 to-transparent" />
+                </motion.div>
+              ))}
             </div>
           </div>
-
-          <div className="p-5">
-            <h3 className="text-lg font-semibold text-white">{member.name}</h3>
-            <div className="w-0 group-hover:w-14 h-[2px] bg-red-600 mt-3 transition-all duration-500 mx-auto" />
-          </div>
-
-
-          <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition pointer-events-none bg-gradient-to-br from-red-600/10 to-transparent" />
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
-
+        </section>
       </div>
       <Footer />
     </>

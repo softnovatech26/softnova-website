@@ -27,3 +27,4 @@ website_backend/venv/
 website_backend/.env
 website_backend/db.sqlite3
 
+node_modules
