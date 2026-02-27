@@ -23,7 +23,7 @@ const Contact = () => {
     setSubmitStatus("");
 
     try {
-      const response = await fetch("https://softnova-website.onrender.com/api/contact/submit/", {
+      const response = await fetch("https://softnovatech26.pythonanywhere.com/api/contact/submit/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
