@@ -12,6 +12,7 @@ import design9 from "../../assets/Graphics Project/mou.jpg";
 import design10 from "../../assets/Graphics Project/pro2.png";
 import design11 from "../../assets/Graphics Project/pro4.png";
 import design12 from "../../assets/Graphics Project/pro5.png";
+import design13 from "../../assets/Graphics Project/Eid Add.jpeg";
 import Footer from "../../components/Footer";
 const GraphicsDesign = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -29,6 +30,7 @@ const GraphicsDesign = () => {
     { src: design10, title: "Product Packaging Design" },
     { src: design11, title: "Creative Layout Posters" },
     { src: design12, title: "Modern Graphic Concept" },
+    { src: design13, title: "Eid Ad Design" },
   ];
 
   return (
