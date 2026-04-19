@@ -84,25 +84,45 @@ const Contact = () => {
               <a
                 href="https://maps.google.com/?q=Sindh,Pakistan"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
                 className="text-red-600 hover:underline block"
               >
-                
+               
               </a>
 
-              <a href="https://www.facebook.com/softnova.tech" target="_blank" className="text-red-600 hover:underline block">
+              <a
+                href="https://www.facebook.com/softnova.tech"
+                target="_blank"
+                rel="noreferrer"
+                className="text-red-600 hover:underline block"
+              >
                 Facebook
               </a>
 
-              <a href="https://www.instagram.com/softnova.tech" target="_blank" className="text-red-600 hover:underline block">
+              <a
+                href="https://www.instagram.com/softnova.tech"
+                target="_blank"
+                rel="noreferrer"
+                className="text-red-600 hover:underline block"
+              >
                 Instagram
               </a>
 
-              <a href="https://www.linkedin.com/company/soft-nova-tech" target="_blank" className="text-red-600 hover:underline block">
+              <a
+                href="https://www.linkedin.com/company/soft-nova-tech"
+                target="_blank"
+                rel="noreferrer"
+                className="text-red-600 hover:underline block"
+              >
                 LinkedIn
               </a>
 
-              <a href="https://x.com/SoftNova94" target="_blank" className="text-red-600 hover:underline block">
+              <a
+                href="https://x.com/SoftNova94"
+                target="_blank"
+                rel="noreferrer"
+                className="text-red-600 hover:underline block"
+              >
                 Twitter
               </a>
 
@@ -145,7 +165,7 @@ const Contact = () => {
               </div>
             )}
 
-            <button type="submit" disabled={isSubmitting} className="w-full bg-red-600 hover:bg-red-700 transition text-white font-semibold py-3 rounded-full disabled:opacity-50">
+            <button type="submit" disabled={isSubmitting} className="w-full bg-red-600 hover:bg-red-700 transition text-white font-semibold py-3 rounded-full disabled:opacity-50 disabled:cursor-not-allowed">
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </form>
