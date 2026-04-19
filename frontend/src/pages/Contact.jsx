@@ -5,6 +5,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "", // ✅ FIX
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -35,7 +36,7 @@ const Contact = () => {
 
       if (data.success) {
         setSubmitStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", message: "" }); // ✅ FIX
       } else {
         setSubmitStatus("Error: " + JSON.stringify(data.errors));
       }
@@ -61,117 +62,90 @@ const Contact = () => {
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           <div className="space-y-6">
-            <div
-              className="group relative rounded-3xl overflow-hidden 
-              bg-white/5 border border-white/10 backdrop-blur-xl
-              shadow-xl transform transition duration-500
-              hover:-translate-y-4 hover:shadow-red-900/40 p-6"
-            >
+
+            <div className="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-xl shadow-xl transform transition duration-500 hover:-translate-y-4 hover:shadow-red-900/40 p-6">
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-              <a
-                href="mailto:softnovatech.pk@gmail.com"
-                className="text-red-600 hover:underline"
-              >
+              <a href="mailto:softnovatech.pk@gmail.com" className="text-red-600 hover:underline">
                 softnovatech.pk@gmail.com
               </a>
             </div>
 
-            <div
-              className="group relative rounded-3xl overflow-hidden 
-              bg-white/5 border border-white/10 backdrop-blur-xl
-              shadow-xl transform transition duration-500
-              hover:-translate-y-4 hover:shadow-red-900/40 p-6"
-            >
+            <div className="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-xl shadow-xl transform transition duration-500 hover:-translate-y-4 hover:shadow-red-900/40 p-6">
               <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-              <a
-                href="tel:+923133124724"
-                className="text-red-600 hover:underline"
-              >
+              <a href="tel:+923133124724" className="text-red-600 hover:underline">
                 +92 313 3124724
               </a>
             </div>
 
-            <div
-              className="group relative rounded-3xl overflow-hidden 
-              bg-white/5 border border-white/10 backdrop-blur-xl
-              shadow-xl transform transition duration-500
-              hover:-translate-y-4 hover:shadow-red-900/40 p-6"
-            >
+            {/* ✅ FIXED VISIT SECTION */}
+            <div className="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-xl shadow-xl transform transition duration-500 hover:-translate-y-4 hover:shadow-red-900/40 p-6">
               <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
+
               <a
-                href="https://goo.gl/maps/example"
+                href="https://maps.google.com/?q=Sindh,Pakistan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-600 hover:underline"
+                className="text-red-600 hover:underline block"
               >
-                SoftNova Tech Remote Based_Sindh,Pakistan
+                
               </a>
+
+              <a href="https://www.facebook.com/softnova.tech" target="_blank" className="text-red-600 hover:underline block">
+                Facebook
+              </a>
+
+              <a href="https://www.instagram.com/softnova.tech" target="_blank" className="text-red-600 hover:underline block">
+                Instagram
+              </a>
+
+              <a href="https://www.linkedin.com/company/soft-nova-tech" target="_blank" className="text-red-600 hover:underline block">
+                LinkedIn
+              </a>
+
+              <a href="https://x.com/SoftNova94" target="_blank" className="text-red-600 hover:underline block">
+                Twitter
+              </a>
+
+              <div>Softnova Tech- Remote Based_Sindh,Pakistan</div>
             </div>
+
           </div>
 
           <form
             onSubmit={handleSubmit}
-            className="group relative rounded-3xl overflow-hidden 
-              bg-white/5 border border-white/10 backdrop-blur-xl
-              shadow-xl transform transition duration-500
-              hover:-translate-y-4 hover:shadow-red-900/40 p-8 space-y-6"
+            className="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-xl shadow-xl transform transition duration-500 hover:-translate-y-4 hover:shadow-red-900/40 p-8 space-y-6"
           >
             <div>
               <label className="block text-gray-300 mb-2">Full Name</label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Your Name"
-                required
-                className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600"
-              />
+              <input type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600" />
             </div>
-            <div> <label className="block text-gray-300 mb-2">Email</label> <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" required className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600" /> </div>
+
             <div>
-          <label className="block text-gray-300 mb-2">Contact Number</label>
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="Enter your phone number"
-            required
-            className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600"
-          />
-        </div>
+              <label className="block text-gray-300 mb-2">Email</label>
+              <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600" />
+            </div>
 
+            <div>
+              <label className="block text-gray-300 mb-2">Contact Number</label>
+              <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600" />
+            </div>
 
-            
             <div>
               <label className="block text-gray-300 mb-2">Message</label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="5"
-                placeholder="Write your message..."
-                required
-                className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600"
-              ></textarea>
+              <textarea name="message" value={formData.message} onChange={handleChange} rows="5" required className="w-full px-4 py-3 rounded-lg bg-black/30 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
             </div>
 
             {submitStatus && (
               <div className={`p-3 rounded-lg text-center ${
-                submitStatus.includes("successfully") 
-                  ? "bg-green-600/20 text-green-400 border border-green-600/30" 
+                submitStatus.includes("successfully")
+                  ? "bg-green-600/20 text-green-400 border border-green-600/30"
                   : "bg-red-600/20 text-red-400 border border-red-600/30"
               }`}>
                 {submitStatus}
               </div>
             )}
 
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-red-600 hover:bg-red-700 transition text-white font-semibold py-3 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
-            >
+            <button type="submit" disabled={isSubmitting} className="w-full bg-red-600 hover:bg-red-700 transition text-white font-semibold py-3 rounded-full disabled:opacity-50">
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </form>
